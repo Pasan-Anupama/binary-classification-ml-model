@@ -33,6 +33,6 @@ history = model.fit(
 )
 
 #Save model
-os.makedirs('../saved_models', exist_ok=True)
-model.save('../saved_models/dog_cat_cnn.h5')
+os.makedirs('saved_models', exist_ok=True)
+model.save('saved_models/dog_cat_cnn.h5')
 print("Model trained and saved !")

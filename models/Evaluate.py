@@ -15,7 +15,7 @@ def predict_image(model, img_path):
 
 if __name__ == "__main__":
     #Load model
-    model = tf.keras.models.load_model('../saved_models/dog_cat_cnn.h5')
+    model = tf.keras.models.load_model('saved_models/dog_cat_cnn.h5')
     
     #Test on sample images 
     test_images = [
