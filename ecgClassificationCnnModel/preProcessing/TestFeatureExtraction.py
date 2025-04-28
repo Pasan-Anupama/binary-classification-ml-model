@@ -1,4 +1,4 @@
-# This code contains the code top test the Feature extraction 
+# This code contains the code to test the Feature extraction 
 
 import numpy as np
 from scipy.signal import find_peaks
@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from FeatureExtraction import extract_waveform_features
 import wfdb 
 
-def test_with_real_mitdb(record_id='100', beat_num=0):
+def test_with_real_mitdb(record_id='101', beat_num=0):
     """
     Test feature extraction on real MIT-BIH data with annotation validation
     
@@ -19,20 +19,25 @@ def test_with_real_mitdb(record_id='100', beat_num=0):
     record = wfdb.rdrecord(f'data/mitdb/{record_id}')
     ann = wfdb.rdann(f'data/mitdb/{record_id}', 'atr')
     
-     # Get signal (Lead II) and sampling frequency
+    # Get signal (Lead II) and sampling frequency
     fs = record.fs
-    signal = record.p_signal[:, 0] 
+    signal = record.p_signal[:, 0]
     
-     # 2. Extract one beat using annotation
+    # 2. Extract one beat using annotation
     r_peak = ann.sample[beat_num]
     beat_type = ann.symbol[beat_num]  # Get physician's label (N, V, etc.)
     
-    # Extract 250ms before to 400ms after R-peak (typical window)
-    window_start = r_peak - int(0.25 * fs)
-    window_end = r_peak + int(0.4 * fs)
+    # Calculate window boundaries with bounds checking
+    window_start = max(0, r_peak - int(0.25 * fs))
+    window_end = min(len(signal), r_peak + int(0.4 * fs))
+    
+    # Check if window is valid
+    if window_start >= window_end:
+        raise ValueError(f"Invalid window for beat {beat_num} (R-peak at {r_peak})")
+    
     beat = signal[window_start:window_end]
     
-     # 3. Extract and print features
+    # 3. Extract and print features
     features = extract_waveform_features(beat)
     
     # 4. Visualization with ground truth
