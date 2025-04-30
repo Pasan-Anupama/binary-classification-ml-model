@@ -1,15 +1,37 @@
-# This code contains the code for Feature extraction
+# This code contains the code for Feature extraction --> IMPLEMEMNTED IN ELSE WHERE(Run.py), REMOVE LATER
 
-from scipy.signal import find_peaks
-import numpy as np
+from Denoise import bandpass_filter, notch_filter, remove_baseline
+from Segment import extract_heartbeats
+from ClassBalancing import balance_classes
+from Normalization import normalize_beats
+from Load import load_ecg
+from Labels import create_labels
 
-def extract_waveform_features(beat):
-    """Extract time-domain features"""
-    peaks, _ = find_peaks(beat, height=0.5)
-    troughs, _ = find_peaks(-beat, height=0.5)
-    return {
-        'num_peaks' : len(peaks),
-        'amplitude': np.max(beat) - np.min(beat),
-        'r_peak_height': beat[peaks[0]] if len(peaks) > 0 else 0
-    }
+
+def extract_waveform_features(record_id, data_dir):
     
+    # 1. Load signal with annotations
+    signal, rpeaks, fs, ann = load_ecg(record_id, data_dir)
+    print(f"Total annotations: {len(ann.sample)}")
+    
+    # 2. Denoising
+    signal = bandpass_filter(signal, fs)
+    signal = notch_filter(signal, fs)
+    signal = remove_baseline(signal, fs)
+    
+    # 3. Heartbeat extraction
+    beats, valid_rpeaks = extract_heartbeats(signal, fs, ann.sample)
+    print(f"Extracted {len(beats)} valid beats")
+    
+    # 4. Normalization
+    beats = normalize_beats(beats)
+    
+    # 5. Create labels
+    labels = create_labels(valid_rpeaks, ann)
+    
+    # 6. Class balancing
+    beats_flat = beats.reshape(beats.shape[0], -1)
+    X_balanced, y_balanced = balance_classes(beats_flat, labels)
+    X_balanced = X_balanced.reshape(-1, beats.shape[1], 1)
+    
+    return X_balanced, y_balanced

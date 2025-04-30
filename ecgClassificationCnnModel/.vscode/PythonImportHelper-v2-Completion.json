@@ -1,0 +1,792 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "wfdb",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wfdb",
+        "description": "wfdb",
+        "detail": "wfdb",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "importPath": "models.Train",
+        "description": "models.Train",
+        "isExtraImport": true,
+        "detail": "models.Train",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "importPath": "models.Train",
+        "description": "models.Train",
+        "isExtraImport": true,
+        "detail": "models.Train",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "layers",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "classification_report",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "bandpass_filter",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "notch_filter",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "remove_baseline",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "bandpass_filter",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "notch_filter",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "remove_baseline",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "extract_heartbeats",
+        "importPath": "preProcessing.Segment",
+        "description": "preProcessing.Segment",
+        "isExtraImport": true,
+        "detail": "preProcessing.Segment",
+        "documentation": {}
+    },
+    {
+        "label": "extract_heartbeats",
+        "importPath": "preProcessing.Segment",
+        "description": "preProcessing.Segment",
+        "isExtraImport": true,
+        "detail": "preProcessing.Segment",
+        "documentation": {}
+    },
+    {
+        "label": "balance_classes",
+        "importPath": "preProcessing.ClassBalancing",
+        "description": "preProcessing.ClassBalancing",
+        "isExtraImport": true,
+        "detail": "preProcessing.ClassBalancing",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_beats",
+        "importPath": "preProcessing.Normalization",
+        "description": "preProcessing.Normalization",
+        "isExtraImport": true,
+        "detail": "preProcessing.Normalization",
+        "documentation": {}
+    },
+    {
+        "label": "load_ecg",
+        "importPath": "preProcessing.Load",
+        "description": "preProcessing.Load",
+        "isExtraImport": true,
+        "detail": "preProcessing.Load",
+        "documentation": {}
+    },
+    {
+        "label": "create_labels",
+        "importPath": "preProcessing.Labels",
+        "description": "preProcessing.Labels",
+        "isExtraImport": true,
+        "detail": "preProcessing.Labels",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_model",
+        "importPath": "models.Evaluate",
+        "description": "models.Evaluate",
+        "isExtraImport": true,
+        "detail": "models.Evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "plot_metrics",
+        "importPath": "models.Evaluate",
+        "description": "models.Evaluate",
+        "isExtraImport": true,
+        "detail": "models.Evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_model",
+        "importPath": "models.Evaluate",
+        "description": "models.Evaluate",
+        "isExtraImport": true,
+        "detail": "models.Evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "EarlyStopping",
+        "importPath": "tensorflow.keras.callbacks",
+        "description": "tensorflow.keras.callbacks",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.callbacks",
+        "documentation": {}
+    },
+    {
+        "label": "neurokit2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "neurokit2",
+        "description": "neurokit2",
+        "detail": "neurokit2",
+        "documentation": {}
+    },
+    {
+        "label": "find_peaks",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "butter",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "filtfilt",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "iirnotch",
+        "importPath": "scipy.signal",
+        "description": "scipy.signal",
+        "isExtraImport": true,
+        "detail": "scipy.signal",
+        "documentation": {}
+    },
+    {
+        "label": "extract_waveform_features",
+        "importPath": "FeatureExtraction",
+        "description": "FeatureExtraction",
+        "isExtraImport": true,
+        "detail": "FeatureExtraction",
+        "documentation": {}
+    },
+    {
+        "label": "SMOTE",
+        "importPath": "imblearn.over_sampling",
+        "description": "imblearn.over_sampling",
+        "isExtraImport": true,
+        "detail": "imblearn.over_sampling",
+        "documentation": {}
+    },
+    {
+        "label": "bandpass_filter",
+        "importPath": "Denoise",
+        "description": "Denoise",
+        "isExtraImport": true,
+        "detail": "Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "notch_filter",
+        "importPath": "Denoise",
+        "description": "Denoise",
+        "isExtraImport": true,
+        "detail": "Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "remove_baseline",
+        "importPath": "Denoise",
+        "description": "Denoise",
+        "isExtraImport": true,
+        "detail": "Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "extract_heartbeats",
+        "importPath": "Segment",
+        "description": "Segment",
+        "isExtraImport": true,
+        "detail": "Segment",
+        "documentation": {}
+    },
+    {
+        "label": "balance_classes",
+        "importPath": "ClassBalancing",
+        "description": "ClassBalancing",
+        "isExtraImport": true,
+        "detail": "ClassBalancing",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_beats",
+        "importPath": "Normalization",
+        "description": "Normalization",
+        "isExtraImport": true,
+        "detail": "Normalization",
+        "documentation": {}
+    },
+    {
+        "label": "load_ecg",
+        "importPath": "Load",
+        "description": "Load",
+        "isExtraImport": true,
+        "detail": "Load",
+        "documentation": {}
+    },
+    {
+        "label": "create_labels",
+        "importPath": "Labels",
+        "description": "Labels",
+        "isExtraImport": true,
+        "detail": "Labels",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_DIR",
+        "kind": 5,
+        "importPath": "data.DownloadData",
+        "description": "data.DownloadData",
+        "peekOfCode": "DATA_DIR = \"data/mitdb\"\nif os.path.isdir(DATA_DIR):\n    print(\"Dataset already exists.\")\nelse : \n    os.makedirs(DATA_DIR, exist_ok=True)\n    print(\"Downloading MIT-BIH data set ......\")\n    wfdb.dl_database('mitdb', DATA_DIR)\n    print(\"Download ended ! Now you you can work with pre-processing\")",
+        "detail": "data.DownloadData",
+        "documentation": {}
+    },
+    {
+        "label": "create_sample_data",
+        "kind": 2,
+        "importPath": "models.testSripts.TestTrainingScript",
+        "description": "models.testSripts.TestTrainingScript",
+        "peekOfCode": "def create_sample_data(n_samples=1000, timesteps=250):\n    # Create normal beats (class 0)\n    normal_beats = np.array([\n        0.2 * np.exp(-50*(np.linspace(0,1,timesteps)-0.25)**2) +  # P-wave\n        1.0 * np.exp(-50*(np.linspace(0,1,timesteps)-0.5)**2) -   # R-peak \n        0.3 * np.exp(-50*(np.linspace(0,1,timesteps)-0.7)**2)     # T-wave\n        for _ in range(n_samples//2)\n    ])\n    # Create abnormal beats (class 1)\n    abnormal_beats = np.array([",
+        "detail": "models.testSripts.TestTrainingScript",
+        "documentation": {}
+    },
+    {
+        "label": "build_cnn",
+        "kind": 2,
+        "importPath": "models.CnnModel",
+        "description": "models.CnnModel",
+        "peekOfCode": "def build_cnn(input_shape, num_classes=2):\n    \"\"\"Builds CNN that adapts to any input length\"\"\"\n    model = models.Sequential([\n        layers.Input(shape=input_shape),\n        layers.Conv1D(64, 15, activation='relu', padding='same'), \n        layers.BatchNormalization(),\n        layers.MaxPooling1D(2),\n        layers.Conv1D(128, 7, activation='relu', padding='same'),\n        layers.BatchNormalization(),\n        layers.MaxPooling1D(2),",
+        "detail": "models.CnnModel",
+        "documentation": {}
+    },
+    {
+        "label": "plot_metrics",
+        "kind": 2,
+        "importPath": "models.Evaluate",
+        "description": "models.Evaluate",
+        "peekOfCode": "def plot_metrics(history):\n    plt.figure(figsize=(12, 4))\n    plt.subplot(1, 2, 1)\n    plt.plot(history.history['accuracy'], label='Train')\n    plt.plot(history.history['val_accuracy'], label='Validation')\n    plt.title('Model Accuracy')\n    plt.ylabel('Accuracy')\n    plt.xlabel('Epoch')\n    plt.legend()\n    plt.subplot(1, 2, 2)",
+        "detail": "models.Evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_model",
+        "kind": 2,
+        "importPath": "models.Evaluate",
+        "description": "models.Evaluate",
+        "peekOfCode": "def evaluate_model(model, X_test, y_test):\n    y_pred = np.argmax(model.predict(X_test), axis=1)\n    print(classification_report(y_test, y_pred))\n    cm = confusion_matrix(y_test, y_pred)\n    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')\n    plt.xlabel('Predicted')\n    plt.ylabel('True')\n    plt.show()",
+        "detail": "models.Evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "process_record",
+        "kind": 2,
+        "importPath": "models.Run",
+        "description": "models.Run",
+        "peekOfCode": "def process_record(record_id, data_dir):\n    # 1. Load signal with annotations\n    signal, rpeaks, fs, ann = load_ecg(record_id, data_dir)\n    print(\"Total beats in \", record_id, \" record : \", len(rpeaks))\n    print(f\"Total annotations: {len(ann.sample)}\")\n    # 2. Denoising\n    signal = bandpass_filter(signal, fs)\n    signal = notch_filter(signal, fs)\n    signal = remove_baseline(signal, fs)\n    # 3. Heartbeat extraction ",
+        "detail": "models.Run",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "models.Train",
+        "description": "models.Train",
+        "peekOfCode": "def train_model(X,y):\n    # Reshape for CNN (samples, timesteps, channels)\n    # X = np.expand_dims(X, axis=-1)\n    # Split data\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.2, stratify=y, random_state=42\n    )\n    # Build model\n    model = build_cnn(input_shape=X_train.shape[1:])\n    # Callbacks",
+        "detail": "models.Train",
+        "documentation": {}
+    },
+    {
+        "label": "record_id",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "record_id = '100' \nrecord = wfdb.rdrecord(f'data/mitdb/{record_id}')\nsignal = record.p_signal[:, 0]  # Use lead II\nfs = record.fs  # Sampling frequency (typically 360 Hz)\n# Detect R-peaks using NeuroKit2 on raw signal or bandpassed signal -> Uses own algorithm rather than searchimg in \n# the annotations -> NeuroKit2 detects R-peaks based on the steepness of the absolute gradient of the ECG and finds \n# local maxima in QRS complexes\nbandpassed_full = bandpass_filter(signal, fs)\nrpeaks_dict = nk.ecg_findpeaks(bandpassed_full, sampling_rate=fs)\nrpeaks = rpeaks_dict['ECG_R_Peaks']",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "record",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "record = wfdb.rdrecord(f'data/mitdb/{record_id}')\nsignal = record.p_signal[:, 0]  # Use lead II\nfs = record.fs  # Sampling frequency (typically 360 Hz)\n# Detect R-peaks using NeuroKit2 on raw signal or bandpassed signal -> Uses own algorithm rather than searchimg in \n# the annotations -> NeuroKit2 detects R-peaks based on the steepness of the absolute gradient of the ECG and finds \n# local maxima in QRS complexes\nbandpassed_full = bandpass_filter(signal, fs)\nrpeaks_dict = nk.ecg_findpeaks(bandpassed_full, sampling_rate=fs)\nrpeaks = rpeaks_dict['ECG_R_Peaks']\n# Select one R-peak to plot (e.g., the 10th beat)",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "signal = record.p_signal[:, 0]  # Use lead II\nfs = record.fs  # Sampling frequency (typically 360 Hz)\n# Detect R-peaks using NeuroKit2 on raw signal or bandpassed signal -> Uses own algorithm rather than searchimg in \n# the annotations -> NeuroKit2 detects R-peaks based on the steepness of the absolute gradient of the ECG and finds \n# local maxima in QRS complexes\nbandpassed_full = bandpass_filter(signal, fs)\nrpeaks_dict = nk.ecg_findpeaks(bandpassed_full, sampling_rate=fs)\nrpeaks = rpeaks_dict['ECG_R_Peaks']\n# Select one R-peak to plot (e.g., the 10th beat)\nbeat_index = 10",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "fs",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "fs = record.fs  # Sampling frequency (typically 360 Hz)\n# Detect R-peaks using NeuroKit2 on raw signal or bandpassed signal -> Uses own algorithm rather than searchimg in \n# the annotations -> NeuroKit2 detects R-peaks based on the steepness of the absolute gradient of the ECG and finds \n# local maxima in QRS complexes\nbandpassed_full = bandpass_filter(signal, fs)\nrpeaks_dict = nk.ecg_findpeaks(bandpassed_full, sampling_rate=fs)\nrpeaks = rpeaks_dict['ECG_R_Peaks']\n# Select one R-peak to plot (e.g., the 10th beat)\nbeat_index = 10\nrpeak_pos = rpeaks[beat_index]",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "bandpassed_full",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "bandpassed_full = bandpass_filter(signal, fs)\nrpeaks_dict = nk.ecg_findpeaks(bandpassed_full, sampling_rate=fs)\nrpeaks = rpeaks_dict['ECG_R_Peaks']\n# Select one R-peak to plot (e.g., the 10th beat)\nbeat_index = 10\nrpeak_pos = rpeaks[beat_index]\n# Define window around R-peak (e.g., 0.5 seconds before and after)\nwindow_before = int(0.5 * fs)\nwindow_after = int(0.5 * fs)\nstart = max(rpeak_pos - window_before, 0)",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "rpeaks_dict",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "rpeaks_dict = nk.ecg_findpeaks(bandpassed_full, sampling_rate=fs)\nrpeaks = rpeaks_dict['ECG_R_Peaks']\n# Select one R-peak to plot (e.g., the 10th beat)\nbeat_index = 10\nrpeak_pos = rpeaks[beat_index]\n# Define window around R-peak (e.g., 0.5 seconds before and after)\nwindow_before = int(0.5 * fs)\nwindow_after = int(0.5 * fs)\nstart = max(rpeak_pos - window_before, 0)\nend = min(rpeak_pos + window_after, len(signal))",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "rpeaks",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "rpeaks = rpeaks_dict['ECG_R_Peaks']\n# Select one R-peak to plot (e.g., the 10th beat)\nbeat_index = 10\nrpeak_pos = rpeaks[beat_index]\n# Define window around R-peak (e.g., 0.5 seconds before and after)\nwindow_before = int(0.5 * fs)\nwindow_after = int(0.5 * fs)\nstart = max(rpeak_pos - window_before, 0)\nend = min(rpeak_pos + window_after, len(signal))\n# Extract segments for each step",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "beat_index",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "beat_index = 10\nrpeak_pos = rpeaks[beat_index]\n# Define window around R-peak (e.g., 0.5 seconds before and after)\nwindow_before = int(0.5 * fs)\nwindow_after = int(0.5 * fs)\nstart = max(rpeak_pos - window_before, 0)\nend = min(rpeak_pos + window_after, len(signal))\n# Extract segments for each step\nsegment_raw = signal[start:end]\nsegment_bandpassed = bandpass_filter(segment_raw, fs)",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "rpeak_pos",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "rpeak_pos = rpeaks[beat_index]\n# Define window around R-peak (e.g., 0.5 seconds before and after)\nwindow_before = int(0.5 * fs)\nwindow_after = int(0.5 * fs)\nstart = max(rpeak_pos - window_before, 0)\nend = min(rpeak_pos + window_after, len(signal))\n# Extract segments for each step\nsegment_raw = signal[start:end]\nsegment_bandpassed = bandpass_filter(segment_raw, fs)\nsegment_notched = notch_filter(segment_bandpassed, fs)",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "window_before",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "window_before = int(0.5 * fs)\nwindow_after = int(0.5 * fs)\nstart = max(rpeak_pos - window_before, 0)\nend = min(rpeak_pos + window_after, len(signal))\n# Extract segments for each step\nsegment_raw = signal[start:end]\nsegment_bandpassed = bandpass_filter(segment_raw, fs)\nsegment_notched = notch_filter(segment_bandpassed, fs)\nsegment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "window_after",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "window_after = int(0.5 * fs)\nstart = max(rpeak_pos - window_before, 0)\nend = min(rpeak_pos + window_after, len(signal))\n# Extract segments for each step\nsegment_raw = signal[start:end]\nsegment_bandpassed = bandpass_filter(segment_raw, fs)\nsegment_notched = notch_filter(segment_bandpassed, fs)\nsegment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment\nt = np.arange(start, end) / fs",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "start = max(rpeak_pos - window_before, 0)\nend = min(rpeak_pos + window_after, len(signal))\n# Extract segments for each step\nsegment_raw = signal[start:end]\nsegment_bandpassed = bandpass_filter(segment_raw, fs)\nsegment_notched = notch_filter(segment_bandpassed, fs)\nsegment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment\nt = np.arange(start, end) / fs\n# Plot results for one beat",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "end",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "end = min(rpeak_pos + window_after, len(signal))\n# Extract segments for each step\nsegment_raw = signal[start:end]\nsegment_bandpassed = bandpass_filter(segment_raw, fs)\nsegment_notched = notch_filter(segment_bandpassed, fs)\nsegment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment\nt = np.arange(start, end) / fs\n# Plot results for one beat\nplt.figure(figsize=(12, 10))",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "segment_raw",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "segment_raw = signal[start:end]\nsegment_bandpassed = bandpass_filter(segment_raw, fs)\nsegment_notched = notch_filter(segment_bandpassed, fs)\nsegment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment\nt = np.arange(start, end) / fs\n# Plot results for one beat\nplt.figure(figsize=(12, 10))\nplt.subplot(4, 1, 1)\nplt.plot(t, segment_raw)",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "segment_bandpassed",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "segment_bandpassed = bandpass_filter(segment_raw, fs)\nsegment_notched = notch_filter(segment_bandpassed, fs)\nsegment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment\nt = np.arange(start, end) / fs\n# Plot results for one beat\nplt.figure(figsize=(12, 10))\nplt.subplot(4, 1, 1)\nplt.plot(t, segment_raw)\nplt.title(f\"Original ECG Segment around R-peak #{beat_index} (Lead II)\")",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "segment_notched",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "segment_notched = notch_filter(segment_bandpassed, fs)\nsegment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment\nt = np.arange(start, end) / fs\n# Plot results for one beat\nplt.figure(figsize=(12, 10))\nplt.subplot(4, 1, 1)\nplt.plot(t, segment_raw)\nplt.title(f\"Original ECG Segment around R-peak #{beat_index} (Lead II)\")\nplt.xlabel(\"Time (s)\")",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "segment_baseline_removed",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "segment_baseline_removed = remove_baseline(segment_notched, fs)\n# Time axis for the segment\nt = np.arange(start, end) / fs\n# Plot results for one beat\nplt.figure(figsize=(12, 10))\nplt.subplot(4, 1, 1)\nplt.plot(t, segment_raw)\nplt.title(f\"Original ECG Segment around R-peak #{beat_index} (Lead II)\")\nplt.xlabel(\"Time (s)\")\nplt.ylabel(\"Amplitude (mV)\")",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "t",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestDenoise",
+        "description": "preProcessing.testScripts.TestDenoise",
+        "peekOfCode": "t = np.arange(start, end) / fs\n# Plot results for one beat\nplt.figure(figsize=(12, 10))\nplt.subplot(4, 1, 1)\nplt.plot(t, segment_raw)\nplt.title(f\"Original ECG Segment around R-peak #{beat_index} (Lead II)\")\nplt.xlabel(\"Time (s)\")\nplt.ylabel(\"Amplitude (mV)\")\nplt.subplot(4, 1, 2)\nplt.plot(t, segment_bandpassed)",
+        "detail": "preProcessing.testScripts.TestDenoise",
+        "documentation": {}
+    },
+    {
+        "label": "test_with_real_mitdb",
+        "kind": 2,
+        "importPath": "preProcessing.testScripts.TestFeatureExtraction",
+        "description": "preProcessing.testScripts.TestFeatureExtraction",
+        "peekOfCode": "def test_with_real_mitdb(record_id='101', beat_num=0):\n    \"\"\"\n    Test feature extraction on real MIT-BIH data with annotation validation\n    Args:\n        record_id: MIT-BIH record number (e.g., '100')\n        beat_num: Index of beat to test (default: first beat)\n    \"\"\"\n    # 1. Load record and annotations\n    record = wfdb.rdrecord(f'data/mitdb/{record_id}')\n    ann = wfdb.rdann(f'data/mitdb/{record_id}', 'atr')",
+        "detail": "preProcessing.testScripts.TestFeatureExtraction",
+        "documentation": {}
+    },
+    {
+        "label": "record_id",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "record_id = '101'\nrecord = wfdb.rdrecord(f'data/mitdb/{record_id}')\nannotation = wfdb.rdann(f'data/mitdb/{record_id}', 'atr')\nsignal = record.p_signal[:, 0] \nfs = record.fs\nt = np.arange(len(signal)) / fs\n# Extract heartbeats -> Segmenting\nbeats, rpeaks = extract_heartbeats(signal, fs)\n# Get ground truth R-peaks from annotations\ntrue_rpeaks = annotation.sample",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "record",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "record = wfdb.rdrecord(f'data/mitdb/{record_id}')\nannotation = wfdb.rdann(f'data/mitdb/{record_id}', 'atr')\nsignal = record.p_signal[:, 0] \nfs = record.fs\nt = np.arange(len(signal)) / fs\n# Extract heartbeats -> Segmenting\nbeats, rpeaks = extract_heartbeats(signal, fs)\n# Get ground truth R-peaks from annotations\ntrue_rpeaks = annotation.sample\ntrue_labels = annotation.symbol",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "annotation",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "annotation = wfdb.rdann(f'data/mitdb/{record_id}', 'atr')\nsignal = record.p_signal[:, 0] \nfs = record.fs\nt = np.arange(len(signal)) / fs\n# Extract heartbeats -> Segmenting\nbeats, rpeaks = extract_heartbeats(signal, fs)\n# Get ground truth R-peaks from annotations\ntrue_rpeaks = annotation.sample\ntrue_labels = annotation.symbol\nplt.figure(figsize=(15, 8))",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "signal = record.p_signal[:, 0] \nfs = record.fs\nt = np.arange(len(signal)) / fs\n# Extract heartbeats -> Segmenting\nbeats, rpeaks = extract_heartbeats(signal, fs)\n# Get ground truth R-peaks from annotations\ntrue_rpeaks = annotation.sample\ntrue_labels = annotation.symbol\nplt.figure(figsize=(15, 8))\n# Plot full signal with detected vs true R-peaks",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "fs",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "fs = record.fs\nt = np.arange(len(signal)) / fs\n# Extract heartbeats -> Segmenting\nbeats, rpeaks = extract_heartbeats(signal, fs)\n# Get ground truth R-peaks from annotations\ntrue_rpeaks = annotation.sample\ntrue_labels = annotation.symbol\nplt.figure(figsize=(15, 8))\n# Plot full signal with detected vs true R-peaks\nplt.subplot(2, 1, 1)",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "t",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "t = np.arange(len(signal)) / fs\n# Extract heartbeats -> Segmenting\nbeats, rpeaks = extract_heartbeats(signal, fs)\n# Get ground truth R-peaks from annotations\ntrue_rpeaks = annotation.sample\ntrue_labels = annotation.symbol\nplt.figure(figsize=(15, 8))\n# Plot full signal with detected vs true R-peaks\nplt.subplot(2, 1, 1)\nplt.plot(t, signal)",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "true_rpeaks",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "true_rpeaks = annotation.sample\ntrue_labels = annotation.symbol\nplt.figure(figsize=(15, 8))\n# Plot full signal with detected vs true R-peaks\nplt.subplot(2, 1, 1)\nplt.plot(t, signal)\nplt.plot(rpeaks/fs, signal[rpeaks], 'rx', label='Detected R-peaks', markersize=8)\nplt.plot(true_rpeaks/fs, signal[true_rpeaks], 'g+', label='True Annotations', markersize=5)\nplt.title(f\"MIT-BIH Record {record_id} - R-peak Detection\")\nplt.xlabel(\"Time (s)\")",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "true_labels",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "true_labels = annotation.symbol\nplt.figure(figsize=(15, 8))\n# Plot full signal with detected vs true R-peaks\nplt.subplot(2, 1, 1)\nplt.plot(t, signal)\nplt.plot(rpeaks/fs, signal[rpeaks], 'rx', label='Detected R-peaks', markersize=8)\nplt.plot(true_rpeaks/fs, signal[true_rpeaks], 'g+', label='True Annotations', markersize=5)\nplt.title(f\"MIT-BIH Record {record_id} - R-peak Detection\")\nplt.xlabel(\"Time (s)\")\nplt.ylabel(\"Amplitude (mV)\")",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "detected_in_truth",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "detected_in_truth = np.sum(np.isin(rpeaks, true_rpeaks))\nprecision = detected_in_truth / len(rpeaks)\nrecall = detected_in_truth / len(true_rpeaks)\nprint(f\"\\nSegmentation Performance on Record {record_id}:\")\nprint(f\"- Detected beats: {len(beats)}\")\nprint(f\"- Ground truth beats: {len(true_rpeaks)}\")\nprint(f\"- Precision: {precision:.1%}\")\nprint(f\"- Recall: {recall:.1%}\")\nprint(f\"- Average beat duration: {len(beats[0])/fs*1000:.1f} ms\")",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "precision",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "precision = detected_in_truth / len(rpeaks)\nrecall = detected_in_truth / len(true_rpeaks)\nprint(f\"\\nSegmentation Performance on Record {record_id}:\")\nprint(f\"- Detected beats: {len(beats)}\")\nprint(f\"- Ground truth beats: {len(true_rpeaks)}\")\nprint(f\"- Precision: {precision:.1%}\")\nprint(f\"- Recall: {recall:.1%}\")\nprint(f\"- Average beat duration: {len(beats[0])/fs*1000:.1f} ms\")",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "recall",
+        "kind": 5,
+        "importPath": "preProcessing.testScripts.TestSegment",
+        "description": "preProcessing.testScripts.TestSegment",
+        "peekOfCode": "recall = detected_in_truth / len(true_rpeaks)\nprint(f\"\\nSegmentation Performance on Record {record_id}:\")\nprint(f\"- Detected beats: {len(beats)}\")\nprint(f\"- Ground truth beats: {len(true_rpeaks)}\")\nprint(f\"- Precision: {precision:.1%}\")\nprint(f\"- Recall: {recall:.1%}\")\nprint(f\"- Average beat duration: {len(beats[0])/fs*1000:.1f} ms\")",
+        "detail": "preProcessing.testScripts.TestSegment",
+        "documentation": {}
+    },
+    {
+        "label": "balance_classes",
+        "kind": 2,
+        "importPath": "preProcessing.ClassBalancing",
+        "description": "preProcessing.ClassBalancing",
+        "peekOfCode": "def balance_classes(X, y):\n    print(f\"Input shapes - X: {X.shape}, y: {y.shape}\")  # Debug\n    # Ensure y is 1D\n    y = np.ravel(y)\n    smote = SMOTE(random_state=42)\n    return smote.fit_resample(X, y)",
+        "detail": "preProcessing.ClassBalancing",
+        "documentation": {}
+    },
+    {
+        "label": "bandpass_filter",
+        "kind": 2,
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "peekOfCode": "def bandpass_filter(signal, fs, lowcut=0.5, highcut=40):\n    nyq = 0.5 * fs\n    low = lowcut / nyq\n    high = highcut / nyq\n    b, a = butter(4, [low, high], btype='band')\n    return filtfilt(b, a, signal)\n# Removes power line interference (typically 50Hz or 60Hz)\ndef notch_filter(signal, fs, freq=50, Q=30):\n    nyq = 0.5 * fs\n    freq = freq / nyq",
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "notch_filter",
+        "kind": 2,
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "peekOfCode": "def notch_filter(signal, fs, freq=50, Q=30):\n    nyq = 0.5 * fs\n    freq = freq / nyq\n    b, a = iirnotch(freq, Q)\n    return filtfilt(b, a, signal)\n# Removes baseline wander using a moving average approach\ndef remove_baseline(signal, fs, window_size=0.2):\n    window_samples = int(window_size * fs)\n    baseline = np.convolve(signal, np.ones(window_samples)/window_samples, mode='same')\n    return signal - baseline",
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "remove_baseline",
+        "kind": 2,
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "peekOfCode": "def remove_baseline(signal, fs, window_size=0.2):\n    window_samples = int(window_size * fs)\n    baseline = np.convolve(signal, np.ones(window_samples)/window_samples, mode='same')\n    return signal - baseline",
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "extract_waveform_features",
+        "kind": 2,
+        "importPath": "preProcessing.FeatureExtraction",
+        "description": "preProcessing.FeatureExtraction",
+        "peekOfCode": "def extract_waveform_features(record_id, data_dir):\n    # 1. Load signal with annotations\n    signal, rpeaks, fs, ann = load_ecg(record_id, data_dir)\n    print(f\"Total annotations: {len(ann.sample)}\")\n    # 2. Denoising\n    signal = bandpass_filter(signal, fs)\n    signal = notch_filter(signal, fs)\n    signal = remove_baseline(signal, fs)\n    # 3. Heartbeat extraction\n    beats, valid_rpeaks = extract_heartbeats(signal, fs, ann.sample)",
+        "detail": "preProcessing.FeatureExtraction",
+        "documentation": {}
+    },
+    {
+        "label": "create_labels",
+        "kind": 2,
+        "importPath": "preProcessing.Labels",
+        "description": "preProcessing.Labels",
+        "peekOfCode": "def create_labels(rpeaks, annotation):\n    \"\"\"Create labels only for valid extracted beats\"\"\"\n    labels = []\n    beat_symbols = annotation.symbol\n    annotation_samples = annotation.sample  # Eg : annotation_samples = [100, 350, 600, 900] -> Annotation sample contains the\n                                            # locations of the R peaks. \n    for peak in rpeaks:\n        idx = np.argmin(np.abs(annotation_samples - peak))\n        labels.append(0 if beat_symbols[idx] in ['N','L','R'] else 1)\n    return np.array(labels)",
+        "detail": "preProcessing.Labels",
+        "documentation": {}
+    },
+    {
+        "label": "load_ecg",
+        "kind": 2,
+        "importPath": "preProcessing.Load",
+        "description": "preProcessing.Load",
+        "peekOfCode": "def load_ecg(record_id, data_dir):\n    \"\"\"\n    Load ECG record and return signal, annotations, and sampling frequency\n    Args:\n        record_id: MIT-BIH record number (e.g., '100')\n        data_dir: Path to directory containing the MIT-BIH data\n    Returns:\n        signal: ECG signal (Lead II)\n        rpeaks: Sample indices of R-peaks -> Total beats in  101  record :  [     7     83    396 ... 649004 649372 649751]\n        fs: Sampling frequency (Hz)",
+        "detail": "preProcessing.Load",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_beats",
+        "kind": 2,
+        "importPath": "preProcessing.Normalization",
+        "description": "preProcessing.Normalization",
+        "peekOfCode": "def normalize_beats(beats):\n    \"\"\"Normalize each beat independently\"\"\"\n    return np.array([(beat - np.mean(beat))/np.std(beat) for beat in beats])",
+        "detail": "preProcessing.Normalization",
+        "documentation": {}
+    },
+    {
+        "label": "extract_heartbeats",
+        "kind": 2,
+        "importPath": "preProcessing.Segment",
+        "description": "preProcessing.Segment",
+        "peekOfCode": "def extract_heartbeats(signal, fs, annotation_rpeaks=None, before=0.25, after=0.4, fixed_length=250):\n    \"\"\"\n    Extract fixed-length heartbeats centered at R-peaks\n    Args:\n        signal: ECG signal\n        fs: Sampling frequency (Hz)\n        annotation_rpeaks: Optional pre-annotated R-peaks\n        before: Seconds before R-peak (default 0.25)\n        after: Seconds after R-peak (default 0.4)\n        fixed_length: Target samples per beat (default 250)",
+        "detail": "preProcessing.Segment",
+        "documentation": {}
+    }
+]

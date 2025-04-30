@@ -2,12 +2,13 @@
 
 import numpy as np
 from sklearn.model_selection import train_test_split
+import tensorflow as tf
 from tensorflow.keras.callbacks import EarlyStopping
-from CnnModel import build_cnn
+from .CnnModel import build_cnn
 
 def train_model(X,y):
-     # Reshape for CNN (samples, timesteps, channels)
-    X = np.expand_dims(X, axis=-1)
+    # Reshape for CNN (samples, timesteps, channels)
+    # X = np.expand_dims(X, axis=-1)
     
     # Split data
     X_train, X_test, y_train, y_test = train_test_split(
@@ -19,7 +20,7 @@ def train_model(X,y):
     
     # Callbacks
     callbacks = [
-        EarlyStopping(patience=5, restore_best_weights=True)
+        tf.keras.callbacks.EarlyStopping(patience=5, restore_best_weights=True)
     ]
     
     # Train

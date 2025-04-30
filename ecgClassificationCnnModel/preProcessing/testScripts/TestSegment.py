@@ -1,27 +1,29 @@
-#This code contains the code for teating the implemented segmenting technique
+#This code contains the code for testing the implemented segmenting technique
 
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import numpy as np
 import matplotlib.pyplot as plt
-from Segment import extract_heartbeats
+from preProcessing.Segment import extract_heartbeats
 import wfdb
 
-# Load real ECG data with annotations
-record_id = '100'
+# Load 100th sample with annotations
+record_id = '101'
 record = wfdb.rdrecord(f'data/mitdb/{record_id}')
 annotation = wfdb.rdann(f'data/mitdb/{record_id}', 'atr')
 
-signal = record.p_signal[:, 0]  # Lead II
+signal = record.p_signal[:, 0] 
 fs = record.fs
 t = np.arange(len(signal)) / fs
 
-# Extract heartbeats
+# Extract heartbeats -> Segmenting
 beats, rpeaks = extract_heartbeats(signal, fs)
 
 # Get ground truth R-peaks from annotations
 true_rpeaks = annotation.sample
 true_labels = annotation.symbol
 
-# Visualization
 plt.figure(figsize=(15, 8))
 
 # Plot full signal with detected vs true R-peaks
@@ -53,6 +55,7 @@ plt.show()
 detected_in_truth = np.sum(np.isin(rpeaks, true_rpeaks))
 precision = detected_in_truth / len(rpeaks)
 recall = detected_in_truth / len(true_rpeaks)
+
 
 print(f"\nSegmentation Performance on Record {record_id}:")
 print(f"- Detected beats: {len(beats)}")
