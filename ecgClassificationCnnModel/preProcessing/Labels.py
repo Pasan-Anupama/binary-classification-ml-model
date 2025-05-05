@@ -3,13 +3,13 @@
 from collections import defaultdict
 import numpy as np
 
-# The function gets rpeaks by neurokit library and annotations of the ECG by att files in db
+# The function gets rpeaks by neurokit library and annotations of the ECG by atr files in db
 def create_labels(rpeaks, annotation):
     """Create labels only for valid extracted beats"""
     labels = []
     beat_symbols = annotation.symbol
     annotation_samples = annotation.sample  # Eg : annotation_samples = [100, 350, 600, 900] -> Annotation sample contains the
-                                            # locations of the R peaks. 
+                                            # locations of the events/annotation samples. 
     
     for peak in rpeaks:
         idx = np.argmin(np.abs(annotation_samples - peak))
@@ -22,4 +22,4 @@ def create_labels(rpeaks, annotation):
 # np.abs(...) = [255, 5, 245,545]
 # np.argmin(...) returns 1 (since 5 is the smallest difference)
 # So, idx[1] is the 350 value.
-# Then get the symbol relevant to 350 by beat_symbols and assign 1 or 0.
+# Then get the symbol relevant to 350 by beat_symbols and assign 1 or 0. (0 -> Normal, 1 -> Abnormal)

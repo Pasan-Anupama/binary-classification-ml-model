@@ -2,6 +2,8 @@
 # other features
 
 import wfdb
+import neurokit2 as nk
+import matplotlib.pyplot as plt
 
 def interpret_data(record_id, data_dir):
     record = wfdb.rdrecord(f'{data_dir}/{record_id}')
@@ -52,6 +54,15 @@ def interpret_data(record_id, data_dir):
     print("Number of annotations : ", numberOfAnnotations)
     print(f"First 10 annotation sample indices : {annotations.sample[:10]}") 
     print(f"First 10 annotation symbols : {annotations.symbol[:10]}")
+    
+    # Finding R peaks with neurokit2 library
+    _, rpeaks = nk.ecg_peaks(signal, sampling_rate=samplingFreq)
+    print("R peaks found at following samples : ", rpeaks.get('ECG_R_Peaks'))
+    numberOfRpeaks = len(rpeaks.get('ECG_R_Peaks'))
+    print("Number of R peaks found : ", numberOfRpeaks)
+    # There are 2274 annotations in the 100th sample and 2271 are found from neurokit library. 
+    print("Accuracy of Neurokit library = ", (numberOfRpeaks/numberOfAnnotations)*100)
+    
     
 def load_data(record_id, data_dir):
     record = wfdb.rdrecord(f'{data_dir}/{record_id}')

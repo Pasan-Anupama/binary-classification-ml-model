@@ -3,7 +3,7 @@ import os
 # Add parent directory to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from models.Train import train_model
+from models.TrainOneRecord import train_model
 import numpy as np
 
 # Generate synthetic ECG-like data

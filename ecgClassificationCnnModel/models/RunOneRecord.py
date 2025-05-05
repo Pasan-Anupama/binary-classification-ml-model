@@ -1,4 +1,4 @@
-# This code contains the main pipeline
+# This code contains the main pipeline (try python -m models.Run to run)
 
 from preProcessing.Denoise import bandpass_filter, notch_filter, remove_baseline
 from preProcessing.Segment import extract_heartbeats
@@ -6,14 +6,14 @@ from preProcessing.ClassBalancing import balance_classes
 from preProcessing.Normalization import normalize_beats
 from preProcessing.Load import load_ecg
 from preProcessing.Labels import create_labels
-from models.Train import train_model
+from models.TrainOneRecord import train_model
 from models.Evaluate import evaluate_model
 from models.Evaluate import plot_metrics, evaluate_model
 
 def process_record(record_id, data_dir):
     # 1. Load signal with annotations
-    signal, rpeaks, fs, ann = load_ecg(record_id, data_dir)
-    print("Total beats in ", record_id, " record : ", len(rpeaks))
+    signal, eventSamples, fs, ann = load_ecg(record_id, data_dir)
+    print("Total events in ", record_id, " record : ", len(eventSamples))
     print(f"Total annotations: {len(ann.sample)}")
     
     # 2. Denoising
@@ -21,7 +21,7 @@ def process_record(record_id, data_dir):
     signal = notch_filter(signal, fs)
     signal = remove_baseline(signal, fs)
     
-    # 3. Heartbeat extraction 
+    # 3. Heartbeat extraction (beats -> segments, valid_rpeaks -> R peaks samples)
     beats, valid_rpeaks = extract_heartbeats(signal, fs, ann.sample)
     print(f"Extracted {len(beats)} valid beats")
     

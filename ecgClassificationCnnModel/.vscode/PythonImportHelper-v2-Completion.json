@@ -55,18 +55,18 @@
     },
     {
         "label": "train_model",
-        "importPath": "models.Train",
-        "description": "models.Train",
+        "importPath": "models.TrainOneRecord",
+        "description": "models.TrainOneRecord",
         "isExtraImport": true,
-        "detail": "models.Train",
+        "detail": "models.TrainOneRecord",
         "documentation": {}
     },
     {
         "label": "train_model",
-        "importPath": "models.Train",
-        "description": "models.Train",
+        "importPath": "models.TrainOneRecord",
+        "description": "models.TrainOneRecord",
         "isExtraImport": true,
-        "detail": "models.Train",
+        "detail": "models.TrainOneRecord",
         "documentation": {}
     },
     {
@@ -159,6 +159,38 @@
         "documentation": {}
     },
     {
+        "label": "bandpass_filter",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "notch_filter",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "remove_baseline",
+        "importPath": "preProcessing.Denoise",
+        "description": "preProcessing.Denoise",
+        "isExtraImport": true,
+        "detail": "preProcessing.Denoise",
+        "documentation": {}
+    },
+    {
+        "label": "extract_heartbeats",
+        "importPath": "preProcessing.Segment",
+        "description": "preProcessing.Segment",
+        "isExtraImport": true,
+        "detail": "preProcessing.Segment",
+        "documentation": {}
+    },
+    {
         "label": "extract_heartbeats",
         "importPath": "preProcessing.Segment",
         "description": "preProcessing.Segment",
@@ -183,6 +215,22 @@
         "documentation": {}
     },
     {
+        "label": "balance_classes",
+        "importPath": "preProcessing.ClassBalancing",
+        "description": "preProcessing.ClassBalancing",
+        "isExtraImport": true,
+        "detail": "preProcessing.ClassBalancing",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_beats",
+        "importPath": "preProcessing.Normalization",
+        "description": "preProcessing.Normalization",
+        "isExtraImport": true,
+        "detail": "preProcessing.Normalization",
+        "documentation": {}
+    },
+    {
         "label": "normalize_beats",
         "importPath": "preProcessing.Normalization",
         "description": "preProcessing.Normalization",
@@ -199,11 +247,35 @@
         "documentation": {}
     },
     {
+        "label": "load_ecg",
+        "importPath": "preProcessing.Load",
+        "description": "preProcessing.Load",
+        "isExtraImport": true,
+        "detail": "preProcessing.Load",
+        "documentation": {}
+    },
+    {
         "label": "create_labels",
         "importPath": "preProcessing.Labels",
         "description": "preProcessing.Labels",
         "isExtraImport": true,
         "detail": "preProcessing.Labels",
+        "documentation": {}
+    },
+    {
+        "label": "create_labels",
+        "importPath": "preProcessing.Labels",
+        "description": "preProcessing.Labels",
+        "isExtraImport": true,
+        "detail": "preProcessing.Labels",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "importPath": "models.MainTrain",
+        "description": "models.MainTrain",
+        "isExtraImport": true,
+        "detail": "models.MainTrain",
         "documentation": {}
     },
     {
@@ -231,11 +303,19 @@
         "documentation": {}
     },
     {
-        "label": "train_test_split",
-        "importPath": "sklearn.model_selection",
-        "description": "sklearn.model_selection",
+        "label": "plot_metrics",
+        "importPath": "models.Evaluate",
+        "description": "models.Evaluate",
         "isExtraImport": true,
-        "detail": "sklearn.model_selection",
+        "detail": "models.Evaluate",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_model",
+        "importPath": "models.Evaluate",
+        "description": "models.Evaluate",
+        "isExtraImport": true,
+        "detail": "models.Evaluate",
         "documentation": {}
     },
     {
@@ -245,6 +325,14 @@
         "importPath": "tensorflow",
         "description": "tensorflow",
         "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
         "documentation": {}
     },
     {
@@ -407,16 +495,16 @@
         "kind": 2,
         "importPath": "exploreDataset.Plotings",
         "description": "exploreDataset.Plotings",
-        "peekOfCode": "def load_data(record_id, data_dir):\n    record = wfdb.rdrecord(f'{data_dir}/{record_id}')\n    ann = wfdb.rdann(f'{data_dir}/{record_id}','atr')\n    return record.p_signal[:,0], ann.sample, record.fs, ann\ndef plot_first_two_qrs(record_id, data_dir):\n    ecg_signal, rpeaks_annotated, fs, ann = load_data(record_id, data_dir)\n    print(f\"Loaded record {record_id} with {len(ecg_signal)} samples at {fs} Hz\")\n    print(f\"Number of annotated beats : {len(rpeaks_annotated)}\")\n    # Use neurokit to clean and find R peaks\n    signals, info = nk.ecg_process(ecg_signal, sampling_rate=fs)",
+        "peekOfCode": "def load_data(record_id, data_dir):\n    record = wfdb.rdrecord(f'{data_dir}/{record_id}')\n    ann = wfdb.rdann(f'{data_dir}/{record_id}', 'atr')\n    return record.p_signal[:, 0], ann.sample, record.fs, ann\ndef plot_first_n_qrs(record_id, data_dir, n=3):\n    ecg_signal, rpeaks_annotated, fs, ann = load_data(record_id, data_dir)\n    print(f\"Loaded record {record_id} with {len(ecg_signal)} samples at {fs} Hz\")\n    print(f\"Number of annotated beats : {len(rpeaks_annotated)}\")\n    # Clean and detect R-peaks using NeuroKit2\n    signals, info = nk.ecg_process(ecg_signal, sampling_rate=fs)",
         "detail": "exploreDataset.Plotings",
         "documentation": {}
     },
     {
-        "label": "plot_first_two_qrs",
+        "label": "plot_first_n_qrs",
         "kind": 2,
         "importPath": "exploreDataset.Plotings",
         "description": "exploreDataset.Plotings",
-        "peekOfCode": "def plot_first_two_qrs(record_id, data_dir):\n    ecg_signal, rpeaks_annotated, fs, ann = load_data(record_id, data_dir)\n    print(f\"Loaded record {record_id} with {len(ecg_signal)} samples at {fs} Hz\")\n    print(f\"Number of annotated beats : {len(rpeaks_annotated)}\")\n    # Use neurokit to clean and find R peaks\n    signals, info = nk.ecg_process(ecg_signal, sampling_rate=fs)\n    rpeaks = info['ECG_R_Peaks']\n    # Delineate ECG waves (QRS onset and offset)\n    delineate = nk.ecg_delineate(ecg_signal, rpeaks, sampling_rate=fs, method='dwt')\n    # Extract Q onset and S offset for first two QRS complexes",
+        "peekOfCode": "def plot_first_n_qrs(record_id, data_dir, n=3):\n    ecg_signal, rpeaks_annotated, fs, ann = load_data(record_id, data_dir)\n    print(f\"Loaded record {record_id} with {len(ecg_signal)} samples at {fs} Hz\")\n    print(f\"Number of annotated beats : {len(rpeaks_annotated)}\")\n    # Clean and detect R-peaks using NeuroKit2\n    signals, info = nk.ecg_process(ecg_signal, sampling_rate=fs)\n    # print(\"Informationm gained by ecg_process function : \", info)\n    rpeaks = info['ECG_R_Peaks']\n    print(\"No of R peaks : \", len(rpeaks))\n    # Define window size around R peak -> Normally a QRS complex consist with 0.694 seconds, ",
         "detail": "exploreDataset.Plotings",
         "documentation": {}
     },
@@ -434,7 +522,7 @@
         "kind": 2,
         "importPath": "models.CnnModel",
         "description": "models.CnnModel",
-        "peekOfCode": "def build_cnn(input_shape, num_classes=2):\n    \"\"\"Builds CNN that adapts to any input length\"\"\"\n    model = models.Sequential([\n        layers.Input(shape=input_shape),\n        layers.Conv1D(64, 15, activation='relu', padding='same'), \n        layers.BatchNormalization(),\n        layers.MaxPooling1D(2),\n        layers.Conv1D(128, 7, activation='relu', padding='same'),\n        layers.BatchNormalization(),\n        layers.MaxPooling1D(2),",
+        "peekOfCode": "def build_cnn(input_shape, num_classes=2):\n    model = models.Sequential([\n        layers.Input(shape=input_shape),\n        layers.Conv1D(64, 15, activation='relu', padding='same'), \n        layers.BatchNormalization(),\n        layers.MaxPooling1D(2),\n        layers.Conv1D(128, 7, activation='relu', padding='same'),\n        layers.BatchNormalization(),\n        layers.MaxPooling1D(2),\n        layers.Conv1D(256, 5, activation='relu', padding='same'),",
         "detail": "models.CnnModel",
         "documentation": {}
     },
@@ -459,19 +547,46 @@
     {
         "label": "process_record",
         "kind": 2,
-        "importPath": "models.Run",
-        "description": "models.Run",
-        "peekOfCode": "def process_record(record_id, data_dir):\n    # 1. Load signal with annotations\n    signal, rpeaks, fs, ann = load_ecg(record_id, data_dir)\n    print(\"Total beats in \", record_id, \" record : \", len(rpeaks))\n    print(f\"Total annotations: {len(ann.sample)}\")\n    # 2. Denoising\n    signal = bandpass_filter(signal, fs)\n    signal = notch_filter(signal, fs)\n    signal = remove_baseline(signal, fs)\n    # 3. Heartbeat extraction ",
-        "detail": "models.Run",
+        "importPath": "models.MainPipeLine",
+        "description": "models.MainPipeLine",
+        "peekOfCode": "def process_record(record_id, data_dir):\n    signal, rpeaks, fs, ann = load_ecg(record_id, data_dir)\n    print(f\"Total annotations: {len(ann.sample)}\")\n    signal = bandpass_filter(signal, fs)\n    signal = notch_filter(signal, fs)\n    signal = remove_baseline(signal, fs)\n    beats, valid_rpeaks = extract_heartbeats(signal, fs, ann.sample)\n    print(f\"Extracted {len(beats)} valid beats\")\n    beats = normalize_beats(beats)\n    labels = create_labels(valid_rpeaks, ann)",
+        "detail": "models.MainPipeLine",
+        "documentation": {}
+    },
+    {
+        "label": "load_dataset",
+        "kind": 2,
+        "importPath": "models.MainPipeLine",
+        "description": "models.MainPipeLine",
+        "peekOfCode": "def load_dataset(record_ids, data_dir):\n    all_beats = []\n    all_labels = []\n    for record_id in record_ids:\n        print(f\"Processing record {record_id}...\")\n        X, y = process_record(str(record_id), data_dir)\n        all_beats.append(X)\n        all_labels.append(y)\n    X_all = np.concatenate(all_beats, axis=0)\n    y_all = np.concatenate(all_labels, axis=0)",
+        "detail": "models.MainPipeLine",
         "documentation": {}
     },
     {
         "label": "train_model",
         "kind": 2,
-        "importPath": "models.Train",
-        "description": "models.Train",
-        "peekOfCode": "def train_model(X,y):\n    # Reshape for CNN (samples, timesteps, channels)\n    # X = np.expand_dims(X, axis=-1)\n    # Split data\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.2, stratify=y, random_state=42\n    )\n    # Build model\n    model = build_cnn(input_shape=X_train.shape[1:])\n    # Callbacks",
-        "detail": "models.Train",
+        "importPath": "models.MainTrain",
+        "description": "models.MainTrain",
+        "peekOfCode": "def train_model(X_train, y_train, X_val, y_val):\n    model = build_cnn(input_shape=X_train.shape[1:])\n    callbacks = [\n        tf.keras.callbacks.EarlyStopping(patience=5, restore_best_weights=True)\n    ]\n    history = model.fit(\n        X_train, y_train,\n        validation_data=(X_val, y_val),\n        epochs=50,\n        batch_size=32,",
+        "detail": "models.MainTrain",
+        "documentation": {}
+    },
+    {
+        "label": "process_record",
+        "kind": 2,
+        "importPath": "models.RunOneRecord",
+        "description": "models.RunOneRecord",
+        "peekOfCode": "def process_record(record_id, data_dir):\n    # 1. Load signal with annotations\n    signal, eventSamples, fs, ann = load_ecg(record_id, data_dir)\n    print(\"Total events in \", record_id, \" record : \", len(eventSamples))\n    print(f\"Total annotations: {len(ann.sample)}\")\n    # 2. Denoising\n    signal = bandpass_filter(signal, fs)\n    signal = notch_filter(signal, fs)\n    signal = remove_baseline(signal, fs)\n    # 3. Heartbeat extraction (beats -> segments, valid_rpeaks -> R peaks samples)",
+        "detail": "models.RunOneRecord",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "models.TrainOneRecord",
+        "description": "models.TrainOneRecord",
+        "peekOfCode": "def train_model(X,y):\n    # Reshape for CNN (samples, timesteps, channels)\n    # X = np.expand_dims(X, axis=-1)\n    # Split data (X -> class balanced set of segments from a record, y -> class balanced set of labels from a record\n    # from these segmemts and labels, 80% is split as trainset (X_train, y_train) and 20% is split as testset(X_test, y_test)\n    # This is done only for one record)\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.2, stratify=y, random_state=42\n    )\n    # Build model -> No training happens here; this just sets up the layers and parameters of the CNN.",
+        "detail": "models.TrainOneRecord",
         "documentation": {}
     },
     {
@@ -749,7 +864,7 @@
         "kind": 2,
         "importPath": "preProcessing.ClassBalancing",
         "description": "preProcessing.ClassBalancing",
-        "peekOfCode": "def balance_classes(X, y):\n    print(f\"Input shapes - X: {X.shape}, y: {y.shape}\")  # Debug\n    # Ensure y is 1D\n    y = np.ravel(y)\n    smote = SMOTE(random_state=42)\n    return smote.fit_resample(X, y)",
+        "peekOfCode": "def balance_classes(X, y):\n    # print(f\"Input shapes - X: {X.shape}, y: {y.shape}\")  # Debug\n    # Ensure y is 1D\n    y = np.ravel(y)\n    smote = SMOTE(random_state=42)\n    return smote.fit_resample(X, y)",
         "detail": "preProcessing.ClassBalancing",
         "documentation": {}
     },
@@ -794,7 +909,7 @@
         "kind": 2,
         "importPath": "preProcessing.Labels",
         "description": "preProcessing.Labels",
-        "peekOfCode": "def create_labels(rpeaks, annotation):\n    \"\"\"Create labels only for valid extracted beats\"\"\"\n    labels = []\n    beat_symbols = annotation.symbol\n    annotation_samples = annotation.sample  # Eg : annotation_samples = [100, 350, 600, 900] -> Annotation sample contains the\n                                            # locations of the R peaks. \n    for peak in rpeaks:\n        idx = np.argmin(np.abs(annotation_samples - peak))\n        labels.append(0 if beat_symbols[idx] in ['N','L','R'] else 1)\n    return np.array(labels)",
+        "peekOfCode": "def create_labels(rpeaks, annotation):\n    \"\"\"Create labels only for valid extracted beats\"\"\"\n    labels = []\n    beat_symbols = annotation.symbol\n    annotation_samples = annotation.sample  # Eg : annotation_samples = [100, 350, 600, 900] -> Annotation sample contains the\n                                            # locations of the events/annotation samples. \n    for peak in rpeaks:\n        idx = np.argmin(np.abs(annotation_samples - peak))\n        labels.append(0 if beat_symbols[idx] in ['N','L','R'] else 1)\n    return np.array(labels)",
         "detail": "preProcessing.Labels",
         "documentation": {}
     },

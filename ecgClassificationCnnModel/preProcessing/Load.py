@@ -20,9 +20,11 @@ def load_ecg(record_id, data_dir):
 
 # Test code for load_ecg function with data got by https://physionet.org/lightwave/
 # if __name__ == "__main__":
-#     signal, rpeaks, fs, ann = load_ecg('108', 'data/mitdb')
-#     print("No of R peaks : ", len(rpeaks))
+#     signal, events, fs, ann = load_ecg('108', 'data/mitdb')
+#     print("No of events : ", len(events))
 #     print("No of annotations : ", len(ann.sample))
+#     print("First 10 samples related to events : ", ann.sample[:10])
+#     print("First 10 annotations/events : ", ann.symbol[:10])
 
 # Explaination -> AS example the 101 th record is 30.06 mins long so it contain (30*60 + 6)*360 = 650160 samples (can be differ).
 # The rpeaks array contains the sample number which is having a R peak. R peaks are identified bu the annotations

@@ -3,7 +3,6 @@
 from tensorflow.keras import layers, models
 
 def build_cnn(input_shape, num_classes=2):
-    """Builds CNN that adapts to any input length"""
     model = models.Sequential([
         layers.Input(shape=input_shape),
         layers.Conv1D(64, 15, activation='relu', padding='same'), 

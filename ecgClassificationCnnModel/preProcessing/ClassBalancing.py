@@ -5,7 +5,7 @@ from imblearn.over_sampling import SMOTE
 import numpy as np
 
 def balance_classes(X, y):
-    print(f"Input shapes - X: {X.shape}, y: {y.shape}")  # Debug
+    # print(f"Input shapes - X: {X.shape}, y: {y.shape}")  # Debug
     
     # Ensure y is 1D
     y = np.ravel(y)

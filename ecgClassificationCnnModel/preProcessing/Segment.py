@@ -54,6 +54,7 @@ def extract_heartbeats(signal, fs, annotation_rpeaks=None, before=0.25, after=0.
         beats.append(beat)
         valid_rpeaks.append(peak)
     
+    # Here sample length has taken as 250 samples, because R peak lenght is about 0.694 seconds
     # Returns beats -> An array of fixed length heart beats (Segments), valid_rpeaks -> An array containing the sample position 
     # of R peaks. Eg : valid_rpeaks = [10, 234, 565] 
     return np.array(beats), np.array(valid_rpeaks)
