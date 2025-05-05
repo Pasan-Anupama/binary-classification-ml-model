@@ -18,6 +18,33 @@
         "documentation": {}
     },
     {
+        "label": "neurokit2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "neurokit2",
+        "description": "neurokit2",
+        "detail": "neurokit2",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -43,15 +70,6 @@
         "documentation": {}
     },
     {
-        "label": "numpy",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
-        "documentation": {}
-    },
-    {
         "label": "layers",
         "importPath": "tensorflow.keras",
         "description": "tensorflow.keras",
@@ -65,15 +83,6 @@
         "description": "tensorflow.keras",
         "isExtraImport": true,
         "detail": "tensorflow.keras",
-        "documentation": {}
-    },
-    {
-        "label": "matplotlib.pyplot",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "matplotlib.pyplot",
-        "description": "matplotlib.pyplot",
-        "detail": "matplotlib.pyplot",
         "documentation": {}
     },
     {
@@ -247,15 +256,6 @@
         "documentation": {}
     },
     {
-        "label": "neurokit2",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "neurokit2",
-        "description": "neurokit2",
-        "detail": "neurokit2",
-        "documentation": {}
-    },
-    {
         "label": "find_peaks",
         "importPath": "scipy.signal",
         "description": "scipy.signal",
@@ -382,6 +382,42 @@
         "description": "data.DownloadData",
         "peekOfCode": "DATA_DIR = \"data/mitdb\"\nif os.path.isdir(DATA_DIR):\n    print(\"Dataset already exists.\")\nelse : \n    os.makedirs(DATA_DIR, exist_ok=True)\n    print(\"Downloading MIT-BIH data set ......\")\n    wfdb.dl_database('mitdb', DATA_DIR)\n    print(\"Download ended ! Now you you can work with pre-processing\")",
         "detail": "data.DownloadData",
+        "documentation": {}
+    },
+    {
+        "label": "interpret_data",
+        "kind": 2,
+        "importPath": "exploreDataset.LoadData",
+        "description": "exploreDataset.LoadData",
+        "peekOfCode": "def interpret_data(record_id, data_dir):\n    record = wfdb.rdrecord(f'{data_dir}/{record_id}')\n    # .hea information\n    print(\"=== HEADER (.hea) INFORMATION ===\")\n    recordNname = record.record_name\n    print(\"Record Name : \", recordNname)\n    samplingFreq = record.fs\n    print(\"Sampling Frequency : \", samplingFreq)\n    # Printing the channels in a record. MLII is Modifed Lead II which is commonly used and V5, V1 are periodiocal leads \n    signalNames = record.sig_name",
+        "detail": "exploreDataset.LoadData",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "kind": 2,
+        "importPath": "exploreDataset.LoadData",
+        "description": "exploreDataset.LoadData",
+        "peekOfCode": "def load_data(record_id, data_dir):\n    record = wfdb.rdrecord(f'{data_dir}/{record_id}')\n    ann = wfdb.rdann(f'{data_dir}/{record_id}', 'atr')\n    return record.p_signal[:, 0], ann.sample, record.fs, ann\nif __name__ == \"__main__\":\n    interpret_data('100', 'data/mitdb')",
+        "detail": "exploreDataset.LoadData",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "kind": 2,
+        "importPath": "exploreDataset.Plotings",
+        "description": "exploreDataset.Plotings",
+        "peekOfCode": "def load_data(record_id, data_dir):\n    record = wfdb.rdrecord(f'{data_dir}/{record_id}')\n    ann = wfdb.rdann(f'{data_dir}/{record_id}','atr')\n    return record.p_signal[:,0], ann.sample, record.fs, ann\ndef plot_first_two_qrs(record_id, data_dir):\n    ecg_signal, rpeaks_annotated, fs, ann = load_data(record_id, data_dir)\n    print(f\"Loaded record {record_id} with {len(ecg_signal)} samples at {fs} Hz\")\n    print(f\"Number of annotated beats : {len(rpeaks_annotated)}\")\n    # Use neurokit to clean and find R peaks\n    signals, info = nk.ecg_process(ecg_signal, sampling_rate=fs)",
+        "detail": "exploreDataset.Plotings",
+        "documentation": {}
+    },
+    {
+        "label": "plot_first_two_qrs",
+        "kind": 2,
+        "importPath": "exploreDataset.Plotings",
+        "description": "exploreDataset.Plotings",
+        "peekOfCode": "def plot_first_two_qrs(record_id, data_dir):\n    ecg_signal, rpeaks_annotated, fs, ann = load_data(record_id, data_dir)\n    print(f\"Loaded record {record_id} with {len(ecg_signal)} samples at {fs} Hz\")\n    print(f\"Number of annotated beats : {len(rpeaks_annotated)}\")\n    # Use neurokit to clean and find R peaks\n    signals, info = nk.ecg_process(ecg_signal, sampling_rate=fs)\n    rpeaks = info['ECG_R_Peaks']\n    # Delineate ECG waves (QRS onset and offset)\n    delineate = nk.ecg_delineate(ecg_signal, rpeaks, sampling_rate=fs, method='dwt')\n    # Extract Q onset and S offset for first two QRS complexes",
+        "detail": "exploreDataset.Plotings",
         "documentation": {}
     },
     {
