@@ -1,3 +1,5 @@
+# Try " python -m models.MainPipeLine to run the " to run the script 
+
 import numpy as np
 from preProcessing.Denoise import bandpass_filter, notch_filter, remove_baseline
 from preProcessing.Segment import extract_heartbeats
