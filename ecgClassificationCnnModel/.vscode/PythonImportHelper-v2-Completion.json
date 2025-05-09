@@ -464,14 +464,6 @@
         "documentation": {}
     },
     {
-        "label": "defaultdict",
-        "importPath": "collections",
-        "description": "collections",
-        "isExtraImport": true,
-        "detail": "collections",
-        "documentation": {}
-    },
-    {
         "label": "DATA_DIR",
         "kind": 5,
         "importPath": "data.DownloadData",

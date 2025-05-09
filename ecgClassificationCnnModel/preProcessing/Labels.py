@@ -1,6 +1,5 @@
 # This code is to assign 0 for normal beats (N, L, R) and assign 1 for abnormal beats. Then return the array of labels. 
 
-from collections import defaultdict
 import numpy as np
 
 # The function gets rpeaks by neurokit library and annotations of the ECG by atr files in db
