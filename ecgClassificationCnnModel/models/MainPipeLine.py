@@ -44,6 +44,7 @@ def load_dataset(record_ids, data_dir):
     print(f"Loaded {len(record_ids)} records: total samples = {X_all.shape[0]}")
     return X_all, y_all
 
+
 if __name__ == "__main__":
     data_dir = 'data/mitdb'
     
@@ -65,3 +66,10 @@ if __name__ == "__main__":
     
     plot_metrics(history)
     evaluate_model(model, X_test, y_test)
+    
+    
+    # Clarifying the dataset provided for training the model
+    # print("First 10 X train data(segments) : ", X_train[:10]) # This contains an array of segments (One segment is  
+    # 250 samples long) -> there are large number of 250 sampled arrays in this X_train array
+    # print("First 10 y train data (Labels) : ", y_train[:10])
+    # print("Shape of the dataset : ", X_train.shape)

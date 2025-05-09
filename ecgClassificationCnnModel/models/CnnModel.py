@@ -1,6 +1,6 @@
 # This contains the code for designing the CNN model
 
-from tensorflow.keras import layers, models
+from tensorflow.keras import layers, models, regularizers
 
 def build_cnn(input_shape, num_classes=2):
     model = models.Sequential([
@@ -24,4 +24,13 @@ def build_cnn(input_shape, num_classes=2):
         loss='sparse_categorical_crossentropy',
         metrics=['accuracy']
     )
+    
     return model
+
+# Example usage
+
+# input_shape = (250,1)
+
+# model = build_cnn(input_shape, num_classes=2)
+# model.summary()
+

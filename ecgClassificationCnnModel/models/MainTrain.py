@@ -17,3 +17,4 @@ def train_model(X_train, y_train, X_val, y_val):
     )
     
     return model, history
+

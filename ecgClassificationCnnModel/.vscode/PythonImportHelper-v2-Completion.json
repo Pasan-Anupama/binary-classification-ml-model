@@ -86,6 +86,14 @@
         "documentation": {}
     },
     {
+        "label": "regularizers",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras",
+        "documentation": {}
+    },
+    {
         "label": "classification_report",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",

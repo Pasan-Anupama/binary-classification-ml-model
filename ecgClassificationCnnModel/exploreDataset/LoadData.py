@@ -59,7 +59,7 @@ def interpret_data(record_id, data_dir):
     _, rpeaks = nk.ecg_peaks(signal, sampling_rate=samplingFreq)
     print("R peaks found at following samples : ", rpeaks.get('ECG_R_Peaks'))
     numberOfRpeaks = len(rpeaks.get('ECG_R_Peaks'))
-    print("Number of R peaks found : ", numberOfRpeaks)
+    print("Number of R peaks found by neurokit2 : ", numberOfRpeaks)
     # There are 2274 annotations in the 100th sample and 2271 are found from neurokit library. 
     print("Accuracy of Neurokit library = ", (numberOfRpeaks/numberOfAnnotations)*100)
     
